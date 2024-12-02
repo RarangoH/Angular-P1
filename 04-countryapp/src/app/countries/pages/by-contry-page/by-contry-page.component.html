@@ -1,0 +1,16 @@
+
+<h2>By Country Name</h2>
+<hr>
+
+<div class="row">
+  <div class="col">
+    <app-search-bar [initialValue]="initialValue" (onDebounce)="searchByCountryName($event)" placeholder="Buscar Por Capital"></app-search-bar>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col">
+    <hr>
+    <countries-table [countries]="countries"></countries-table>
+  </div>
+</div>
