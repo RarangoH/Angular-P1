@@ -31,6 +31,7 @@ export class HeroService {
   }
 
   getSuggestions(query:string):Observable<Hero[]>{
-    return this.http.get<Hero[]>(`/heroes?q=${query}&_limit=6`)
+    console.log("query"+query)
+    return this.http.get<Hero[]>(`${this.baseURL}/heroes?q=${query}&_limit=6`)
   }
 }
